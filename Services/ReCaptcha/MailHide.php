@@ -116,8 +116,8 @@ class Services_ReCaptcha_MailHide extends Services_ReCaptcha_Base
      * @see Services_ReCaptcha_MailHide::$options
      */
     public function __construct($pubKey, $privKey, $email = null, 
-        array $options = array()) 
-    {
+        array $options = array()
+    ) {
         // check that mcrypt is available
         if (!extension_loaded('mcrypt')) {
             throw new Services_ReCaptcha_Exception(__CLASS__ . ' requires mcrypt.');
@@ -203,18 +203,20 @@ class Services_ReCaptcha_MailHide extends Services_ReCaptcha_Base
         }
         $url = htmlentities($this->getURL());
 
-        return sprintf('%s<a href="%s" onclick="window.open(\'%s\', \'\', '
-            . '\'toolbar=0,scrollbars=0,location=0,statusbar=0,'
-            . 'menubar=0,resizable=0,width=%s,height=%s\'); return false;" '
-            . 'title="%s">%s</a>%s',
-              $pre,
-              $url,
-              $url, 
-              intval($this->getOption('popup_width')),
-              intval($this->getOption('popup_height')),
-              htmlentities($this->getOption('link_title')),
-              $text,
-              $post);
+        return sprintf(
+            '%s<a href="%s" onclick="window.open(\'%s\', \'\', ' .
+            '\'toolbar=0,scrollbars=0,location=0,statusbar=0,' .
+            'menubar=0,resizable=0,width=%s,height=%s\'); return false;" ' .
+            'title="%s">%s</a>%s',
+            $pre,
+            $url,
+            $url, 
+            intval($this->getOption('popup_width')),
+            intval($this->getOption('popup_height')),
+            htmlentities($this->getOption('link_title')),
+            $text,
+            $post
+        );
     }
     
     // }}}

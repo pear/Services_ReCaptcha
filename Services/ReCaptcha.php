@@ -176,7 +176,8 @@ class Services_ReCaptcha extends Services_ReCaptcha_Base
         // in order to avoid getting browser warnings, if we have an SSL web 
         // site we use the secure url
         if ($this->options['secure'] 
-         || (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')) {
+            || (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')
+        ) {
             $url = $this->apiSecureURL;
         } else {
             $url = $this->apiURL;

@@ -53,13 +53,15 @@ $mailhide3 = new Services_ReCaptcha_MailHide(
     $privateKey,
     'johndoe@example.com'
 );
-$mailhide3->setOptions(array(
-    'link_text'    => 'Click here to display my email',
-    'link_title'   => 'Some help message',
-    'link_title'   => 'Some help message',
-    'popup_width'  => 800,
-    'popup_height' => 600,
-));
+$mailhide3->setOptions(
+    array(
+        'link_text'    => 'Click here to display my email',
+        'link_title'   => 'Some help message',
+        'link_title'   => 'Some help message',
+        'popup_width'  => 800,
+        'popup_height' => 600,
+    )
+);
 
 ?>
 <html>

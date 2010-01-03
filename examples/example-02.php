@@ -52,10 +52,9 @@ $recaptcha->setOption('lang', 'fr');     // set language to french
 // $recaptcha->setOptions(array('theme' => 'white', 'lang' => 'fr'));
 
 // we use a proxy, so we need to configure it
-$recaptcha->getRequest()->setConfig(array(
-    'proxy_host' => 'localhost',
-    'proxy_port' => 8118,
-));
+$recaptcha->getRequest()->setConfig(
+    array('proxy_host' => 'localhost', 'proxy_port' => 8118)
+);
 
 // if the form was submitted
 if (isset($_POST['submit'])) {
