@@ -145,18 +145,20 @@ abstract class Services_ReCaptcha_Base
     // setOption() {{{
 
     /**
-     * Sets an option in {@link Services_ReCaptcha::$options}.
+     * Sets an option in {@link Services_ReCaptcha::$options} and returns the
+     * current Services_ReCaptcha_Base instance.
      *
      * @param string $option Name of option
      * @param mixed  $value  Value of option
      *
-     * @return void
+     * @return Services_ReCaptcha_Base
      */
     public function setOption($option, $value)
     {
         if (array_key_exists($option, $this->options)) {
             $this->options[$option] = $value;
-        } 
+        }
+        return $this;
     }
 
     // }}}
@@ -176,11 +178,12 @@ abstract class Services_ReCaptcha_Base
     // setOptions() {{{
 
     /**
-     * Sets a number of options at once in {@link Services_ReCaptcha::$options}.
+     * Sets a number of options at once in {@link Services_ReCaptcha::$options}
+     * and returns the current Services_ReCaptcha_Base instance.
      *
      * @param array $options Associative array of options name/value
      *
-     * @return void
+     * @return Services_ReCaptcha_Base
      * @see Services_ReCaptcha::setOption()
      */
     public function setOptions(array $options)
@@ -188,6 +191,7 @@ abstract class Services_ReCaptcha_Base
         foreach ($options as $option => $value) {
             $this->setOption($option, $value);
         }
+        return $this;
     }
 
     // }}}

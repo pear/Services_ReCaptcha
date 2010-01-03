@@ -344,16 +344,18 @@ HTML;
     // setError() {{{
 
     /**
-     * Sets the error code to display in the captcha.
+     * Sets the error code to display in the captcha and returns the current 
+     * Services_ReCaptcha instance.
      *
      * @param string $error The error message
      *
-     * @return void
+     * @return Services_ReCaptcha
      * @see Services_ReCaptcha::$error
      */
     public function setError($error)
     {
         $this->error = $error;
+        return $this;
     }
 
     // }}}
@@ -378,16 +380,18 @@ HTML;
     // setRequest() {{{
     
     /**
-     * Sets the HTTP_Request2 instance.
+     * Sets the HTTP_Request2 instance and returns the current 
+     * Services_ReCaptcha instance.
      * 
      * @param HTTP_Request2 $request The request to set
      *
-     * @return void
+     * @return Services_ReCaptcha
      * @see Services_ReCaptcha::$request
      */
     public function setRequest(HTTP_Request2 $request)
     {
         $this->request = $request;
+        return $this;
     }
     
     // }}}

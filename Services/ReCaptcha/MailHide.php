@@ -237,16 +237,18 @@ class Services_ReCaptcha_MailHide extends Services_ReCaptcha_Base
     // setEmail() {{{
 
     /**
-     * Sets the email to "hide".
+     * Sets the email to "hide" and returns the current 
+     * Services_ReCaptcha_MailHide instance.
      *
      * @param string $email The email to hide
      *
-     * @return void
+     * @return Services_ReCaptcha_MailHide
      * @see Services_ReCaptcha_MailHide::$email
      */
     public function setEmail($email)
     {
         $this->email = $email;
+        return $this;
     }
 
     // }}}
