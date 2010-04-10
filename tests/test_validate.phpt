@@ -31,7 +31,9 @@ try {
     if (!$livetest) {
         $mock = new HTTP_Request2_Adapter_Mock();
         $resp = new HTTP_Request2_Response('HTTP/1.1 200 Ok', false);
-        $resp->appendBody("false\ninvalid-site-private-key");
+        $resp->appendBody("false\n'Input error: challenge: Error parsing "
+            . "captcha challenge value\\nprivatekey: Format of site key was "
+            . "invalid\\n'");
         $mock->addResponse($resp);
         $recaptcha->getRequest()->setAdapter($mock);
     }
@@ -57,5 +59,5 @@ try {
 ?>
 --EXPECT--
 unknown
-invalid-site-private-key
+'Input error: challenge: Error parsing captcha challenge value\nprivatekey: Format of site key was invalid\n'
 

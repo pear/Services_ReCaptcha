@@ -22,7 +22,7 @@ try {
     $recaptcha->apiVerifyURL = 'http://api-verify.recaptcha.net/foo';
     if (!$livetest) {
         $mock = new HTTP_Request2_Adapter_Mock();
-        $resp = new HTTP_Request2_Response('HTTP/1.1 405 Not Allowed', false);
+        $resp = new HTTP_Request2_Response('HTTP/1.1 404 Not Found', false);
         $mock->addResponse($resp);
         $request = $recaptcha->getRequest();
         $request->setAdapter($mock);
@@ -39,5 +39,5 @@ try {
 ?>
 --EXPECT--
 Absolute URL required
-Not Allowed
+Not Found
 HTTP_Request2_Response

@@ -40,17 +40,18 @@ http://mailhide.recaptcha.net/apikey
  </lead>
  <date>2010-01-04</date>
  <version>
-  <release>0.2.2</release>
-  <api>0.2.2</api>
+  <release>1.0.0</release>
+  <api>1.0.0</api>
  </version>
  <stability>
-  <release>beta</release>
-  <api>beta</api>
+  <release>stable</release>
+  <api>stable</api>
  </stability>
  <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
  <notes>
-* All setters now return the current instance to allow chaining of set calls,
-* Some fixes to follow new PEAR coding standards.
+* fixed 2 tests that failed when running tests against the live server,
+* make sure explode() splits the validate response in two tokens only,
+* Services_ReCaptcha has now documentation in docbook format.
  </notes>
  <contents>
   <dir name="/">
@@ -156,6 +157,24 @@ Initial release.
    <notes>
 * Added support for the new "custom_translations" reCAPTCHA option (+ tests),
 * Comments cleanup.
+   </notes>
+  </release>
+
+  <!-- version 0.2.2 -->
+  <release>
+   <date>2010-01-04</date>
+   <version>
+    <release>0.2.2</release>
+    <api>0.2.2</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+* All setters now return the current instance to allow chaining of set calls,
+* Some fixes to follow new PEAR coding standards.
    </notes>
   </release>
 

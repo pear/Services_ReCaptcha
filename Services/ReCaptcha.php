@@ -313,7 +313,7 @@ HTML;
             );
         }
 
-        $body = explode("\n", $httpResponse->getBody());
+        $body = explode("\n", $httpResponse->getBody(), 2);
         if (count($body) != 2) {
             $this->setError('unknown');
             return false;
