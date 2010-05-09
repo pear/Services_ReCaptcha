@@ -38,9 +38,9 @@ http://mailhide.recaptcha.net/apikey
   <email>izimobil@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2010-04-10</date>
+ <date>2010-05-09</date>
  <version>
-  <release>1.0.0</release>
+  <release>1.0.1</release>
   <api>1.0.0</api>
  </version>
  <stability>
@@ -49,9 +49,8 @@ http://mailhide.recaptcha.net/apikey
  </stability>
  <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
  <notes>
-* fixed 2 tests that failed when running tests against the live server,
-* make sure explode() splits the validate response in two tokens only,
-* Services_ReCaptcha has now documentation in docbook format.
+* Fixed bug #17383: Services_ReCaptcha::validate() should not send the request
+  if challenge or response are empty.
  </notes>
  <contents>
   <dir name="/">
@@ -175,6 +174,25 @@ Initial release.
    <notes>
 * All setters now return the current instance to allow chaining of set calls,
 * Some fixes to follow new PEAR coding standards.
+   </notes>
+  </release>
+
+  <!-- version 1.0.0 -->
+  <release>
+   <date>2010-04-10</date>
+   <version>
+    <release>1.0.0</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+* fixed 2 tests that failed when running tests against the live server,
+* make sure explode() splits the validate response in two tokens only,
+* Services_ReCaptcha has now documentation in docbook format.
    </notes>
   </release>
 

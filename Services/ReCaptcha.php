@@ -286,6 +286,12 @@ HTML;
             $ip = $_SERVER['REMOTE_ADDR'];
         }
 
+        if (!$challenge || !$response) {
+            // Don't send a request if challenge or response is empty
+            $this->setError('incorrect-captcha-sol');
+            return false;
+        }
+
         try {
             $request = clone $this->getRequest();
             $request->setMethod(HTTP_Request2::METHOD_POST);

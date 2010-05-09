@@ -12,7 +12,7 @@ $livetest = getenv('SERVICES_RECAPTCHA_LIVETEST');
 try {
     $recaptcha = new Services_ReCaptcha('public_key', 'private_key');
     $recaptcha->apiVerifyURL = 'Some invalid url...';
-    $recaptcha->validate();
+    $recaptcha->validate('foo', 'bar');
 } catch (Services_ReCaptcha_Exception $exc) {
     echo $exc->getMessage() . "\n";
 }
@@ -30,10 +30,22 @@ try {
         $request = new HTTP_Request2();
     }
     $recaptcha->setRequest($request);
-    $recaptcha->validate();
+    $recaptcha->validate('foo', 'bar');
 } catch (Services_ReCaptcha_HTTPException $exc) {
     echo $exc->getMessage() . "\n";
-    echo get_class($exc->response);
+    echo get_class($exc->response) . "\n";
+}
+
+try {
+    $recaptcha = new Services_ReCaptcha('public_key', 'private_key');
+    $recaptcha->validate();
+    echo $recaptcha->getError() . "\n";
+    $recaptcha->validate(false, false);
+    echo $recaptcha->getError() . "\n";
+    $recaptcha->validate('', '');
+    echo $recaptcha->getError();
+} catch (Services_ReCaptcha_Exception $exc) {
+    echo $exc->getMessage();
 }
 
 ?>
@@ -41,3 +53,6 @@ try {
 Absolute URL required
 Not Found
 HTTP_Request2_Response
+incorrect-captcha-sol
+incorrect-captcha-sol
+incorrect-captcha-sol
