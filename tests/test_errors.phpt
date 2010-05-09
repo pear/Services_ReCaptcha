@@ -40,9 +40,9 @@ try {
     $recaptcha = new Services_ReCaptcha('public_key', 'private_key');
     $recaptcha->validate();
     echo $recaptcha->getError() . "\n";
-    $recaptcha->validate(false, false);
+    $recaptcha->validate('foo', false);
     echo $recaptcha->getError() . "\n";
-    $recaptcha->validate('', '');
+    $recaptcha->validate('', 'bar');
     echo $recaptcha->getError();
 } catch (Services_ReCaptcha_Exception $exc) {
     echo $exc->getMessage();
