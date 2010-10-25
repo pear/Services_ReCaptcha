@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package 
-    packagerversion="1.7.2" 
-    version="2.0" 
-    xmlns="http://pear.php.net/dtd/package-2.0" 
-    xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" 
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-    xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-                        http://pear.php.net/dtd/tasks-1.0.xsd
-                        http://pear.php.net/dtd/package-2.0
-                        http://pear.php.net/dtd/package-2.0.xsd"
->
+<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0                         http://pear.php.net/dtd/tasks-1.0.xsd                         http://pear.php.net/dtd/package-2.0                         http://pear.php.net/dtd/package-2.0.xsd">
  <name>Services_ReCaptcha</name>
  <channel>pear.php.net</channel>
  <summary>PHP5 interface to the reCATCHA and the reCATCHA Mailhide API</summary>
- <description>
- <![CDATA[
-Services_ReCaptcha is a PHP5 interface to the two services offered by
+ <description>Services_ReCaptcha is a PHP5 interface to the two services offered by
 recaptcha: reCAPTCHA and reCAPTCHA Mailhide.
 
 reCAPTCHA is a freely available CAPTCHA implementation. It distinguishes 
@@ -29,18 +17,17 @@ The reCAPTCHA can only be solved by humans, so this stops spammers from gaining
 access to your email address through automated programs.
 reCAPTCHA Mailhide requires the mcrypt php extension and you will also need a 
 public and a private API key, that can be generated here:
-http://mailhide.recaptcha.net/apikey
- ]]>
- </description>
+http://mailhide.recaptcha.net/apikey</description>
  <lead>
   <name>David Jean Louis</name>
   <user>izi</user>
   <email>izimobil@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2010-05-09</date>
+ <date>2010-10-26</date>
+ <time>01:05:07</time>
  <version>
-  <release>1.0.1</release>
+  <release>1.0.2</release>
   <api>1.0.0</api>
  </version>
  <stability>
@@ -49,34 +36,25 @@ http://mailhide.recaptcha.net/apikey
  </stability>
  <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
  <notes>
-* Fixed bug #17383: Services_ReCaptcha::validate() should not send the request
-  if challenge or response are empty.
+Automatically built QA release
+Bug #17383 Services_ReCaptcha::validate should not send request if empty
+chall/resp - izi
  </notes>
  <contents>
-  <dir name="/">
-   <file name="Services/ReCaptcha.php" role="php">
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
-   </file>
-   <file name="Services/ReCaptcha/Base.php" role="php">
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
-   </file>
-   <file name="Services/ReCaptcha/Exception.php" role="php">
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
-   </file>
-   <file name="Services/ReCaptcha/MailHide.php" role="php">
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
-   </file>
-   <file name="examples/example-01.php" role="doc"/>
-   <file name="examples/example-02.php" role="doc"/>
-   <file name="examples/example-03.php" role="doc"/>
-   <file name="tests/AllTests.php" role="test">
-    <tasks:replace from="@package_version@" to="version" type="package-info" />
-   </file>
-   <file name="tests/test_errors.phpt" role="test" />
-   <file name="tests/test_options.phpt" role="test" />
-   <file name="tests/test_gethtml.phpt" role="test" />
-   <file name="tests/test_validate.phpt" role="test" />
-   <file name="tests/test_mailhide.phpt" role="test" />
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="/" md5sum="50d868b61a7877e55646cbf8751814dd" name="examples/example-01.php" role="doc" />
+   <file baseinstalldir="/" md5sum="23d4442b1760d81f8cab1da71accca99" name="examples/example-02.php" role="doc" />
+   <file baseinstalldir="/" md5sum="56df2c7ea28790fe74abf4b489b84b1c" name="examples/example-03.php" role="doc" />
+   <file baseinstalldir="/" md5sum="a2b117a9c024c67f9ed3c96b4c5f4fc9" name="Services/ReCaptcha.php" role="php" />
+   <file baseinstalldir="/" md5sum="ef390bd3471a0894742bec4f66065151" name="Services/ReCaptcha/Base.php" role="php" />
+   <file baseinstalldir="/" md5sum="4687c632a30e1661023959ca8d43883b" name="Services/ReCaptcha/Exception.php" role="php" />
+   <file baseinstalldir="/" md5sum="0eba318dbf25524ffc9a51a26d1c7144" name="Services/ReCaptcha/MailHide.php" role="php" />
+   <file baseinstalldir="/" md5sum="7eae2afd7402148c1d6af5c3e187795f" name="tests/AllTests.php" role="test" />
+   <file baseinstalldir="/" md5sum="d1e13a5305e5ef06f095404b7255d53e" name="tests/test_errors.phpt" role="test" />
+   <file baseinstalldir="/" md5sum="864b13f502382546f9cbbb0692a04b2d" name="tests/test_gethtml.phpt" role="test" />
+   <file baseinstalldir="/" md5sum="11a03ad86667da151a192f15efc49d3c" name="tests/test_mailhide.phpt" role="test" />
+   <file baseinstalldir="/" md5sum="df160d1a97d9bcf4acc08f1244639fad" name="tests/test_options.phpt" role="test" />
+   <file baseinstalldir="/" md5sum="33968c52f7455767167b8f1810b6f54a" name="tests/test_validate.phpt" role="test" />
   </dir>
  </contents>
  <dependencies>
@@ -101,8 +79,6 @@ http://mailhide.recaptcha.net/apikey
  </dependencies>
  <phprelease />
  <changelog>
-
-  <!-- version 0.1.0 -->
   <release>
    <date>2009-02-02</date>
    <version>
@@ -118,8 +94,6 @@ http://mailhide.recaptcha.net/apikey
 Initial release.
    </notes>
   </release>
-
-  <!-- version 0.2.0 -->
   <release>
    <date>2009-04-17</date>
    <version>
@@ -132,16 +106,14 @@ Initial release.
    </stability>
    <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
    <notes>
-* Moved the "secure" contructor parameter to the option array,
-* Added a "xhtml" option to specify whether the html should be xhtml compliant or not,
+* Moved the &quot;secure&quot; contructor parameter to the option array,
+* Added a &quot;xhtml&quot; option to specify whether the html should be xhtml compliant or not,
 * Make use of heredoc syntax, more readable,
-* Changed "hide_needle" to "mask_text" (thanks mike !),
+* Changed &quot;hide_needle&quot; to &quot;mask_text&quot; (thanks mike !),
 * Better documentation of method return values,
 * Updated tests and examples to reflect the changes.
    </notes>
   </release>
-
-  <!-- version 0.2.1 -->
   <release>
    <date>2009-06-25</date>
    <version>
@@ -154,12 +126,10 @@ Initial release.
    </stability>
    <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
    <notes>
-* Added support for the new "custom_translations" reCAPTCHA option (+ tests),
+* Added support for the new &quot;custom_translations&quot; reCAPTCHA option (+ tests),
 * Comments cleanup.
    </notes>
   </release>
-
-  <!-- version 0.2.2 -->
   <release>
    <date>2010-01-04</date>
    <version>
@@ -176,8 +146,6 @@ Initial release.
 * Some fixes to follow new PEAR coding standards.
    </notes>
   </release>
-
-  <!-- version 1.0.0 -->
   <release>
    <date>2010-04-10</date>
    <version>
@@ -195,6 +163,22 @@ Initial release.
 * Services_ReCaptcha has now documentation in docbook format.
    </notes>
   </release>
-
+  <release>
+   <version>
+    <release>1.0.2</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2010-10-26</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+Automatically built QA release
+Bug #17383 Services_ReCaptcha::validate should not send request if empty
+chall/resp - izi
+   </notes>
+  </release>
  </changelog>
 </package>
