@@ -20,9 +20,9 @@ echo $recaptcha . "\n";
 
 ?>
 --EXPECT--
-<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=public_key"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=public_key"></script>
 <noscript>
-    <iframe src="http://api.recaptcha.net/noscript?k=public_key" height="300" width="500" frameborder="0">
+    <iframe src="https://www.google.com/recaptcha/api/noscript?k=public_key" height="300" width="500" frameborder="0">
     </iframe>
     <br/>
     <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
@@ -32,9 +32,9 @@ echo $recaptcha . "\n";
 <script type="text/javascript">
     var RecaptchaOptions = {"theme":"white","lang":"fr","custom_translations":{"instructions_visual":"foo"}};
 </script>
-<script type="text/javascript" src="https://api-secure.recaptcha.net/challenge?k=public_key&error=incorrect-captcha-sol"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=public_key&error=incorrect-captcha-sol"></script>
 <noscript>
-    <iframe src="https://api-secure.recaptcha.net/noscript?k=public_key&error=incorrect-captcha-sol" height="300" width="500" frameborder="0">
+    <iframe src="https://www.google.com/recaptcha/api/noscript?k=public_key&error=incorrect-captcha-sol" height="300" width="500" frameborder="0">
     </iframe>
     <br/>
     <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
@@ -44,9 +44,9 @@ echo $recaptcha . "\n";
 <script type="text/javascript">
     var RecaptchaOptions = {"theme":"white","lang":"fr","custom_translations":{"instructions_visual":"foo"}};
 </script>
-<script type="text/javascript" src="https://api-secure.recaptcha.net/challenge?k=public_key&error=incorrect-captcha-sol"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api/challenge?k=public_key&error=incorrect-captcha-sol"></script>
 <noscript>
-    <iframe src="https://api-secure.recaptcha.net/noscript?k=public_key&error=incorrect-captcha-sol" height="300" width="500" frameborder="0">
+    <iframe src="https://www.google.com/recaptcha/api/noscript?k=public_key&error=incorrect-captcha-sol" height="300" width="500" frameborder="0">
     </iframe>
     <br>
     <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
