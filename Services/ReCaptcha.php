@@ -62,7 +62,7 @@ class Services_ReCaptcha extends Services_ReCaptcha_Base
      *
      * @var string $apiURL
      */
-    public $apiURL = 'http://api.recaptcha.net';
+    public $apiURL = 'https://www.google.com/recaptcha/api';
 
     /**
      * The reCAPTCHA API secure URL, this is URL is used by default when the 
@@ -71,14 +71,14 @@ class Services_ReCaptcha extends Services_ReCaptcha_Base
      *
      * @var string $apiSecureURL
      */
-    public $apiSecureURL = 'https://api-secure.recaptcha.net';
+    public $apiSecureURL = 'https://www.google.com/recaptcha/api';
 
     /**
      * Url of the ReCaptcha verify API.
      *
      * @var string $apiVerifyURL
      */
-    public $apiVerifyURL = 'http://api-verify.recaptcha.net/verify';
+    public $apiVerifyURL = 'http://www.google.com/recaptcha/api/verify';
 
     /**
      * The error code used to display the error message in the captcha.

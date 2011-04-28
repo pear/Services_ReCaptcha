@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0                         http://pear.php.net/dtd/tasks-1.0.xsd                         http://pear.php.net/dtd/package-2.0                         http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0                         http://pear.php.net/dtd/tasks-1.0.xsd                         http://pear.php.net/dtd/package-2.0                         http://pear.php.net/dtd/package-2.0.xsd">
  <name>Services_ReCaptcha</name>
  <channel>pear.php.net</channel>
  <summary>PHP5 interface to the reCATCHA and the reCATCHA Mailhide API</summary>
@@ -24,10 +24,10 @@ http://mailhide.recaptcha.net/apikey</description>
   <email>izimobil@gmail.com</email>
   <active>yes</active>
  </lead>
- <date>2010-10-26</date>
- <time>01:05:07</time>
+ <date>2011-04-28</date>
+ <time>21:01:42</time>
  <version>
-  <release>1.0.2</release>
+  <release>1.0.3</release>
   <api>1.0.0</api>
  </version>
  <stability>
@@ -36,16 +36,15 @@ http://mailhide.recaptcha.net/apikey</description>
  </stability>
  <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
  <notes>
-Automatically built QA release
-Bug #17383 Services_ReCaptcha::validate should not send request if empty
-chall/resp - izi
+QA Release
+Bug #18487: Recapture has changed ssl certificates
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <file baseinstalldir="/" md5sum="50d868b61a7877e55646cbf8751814dd" name="examples/example-01.php" role="doc" />
    <file baseinstalldir="/" md5sum="23d4442b1760d81f8cab1da71accca99" name="examples/example-02.php" role="doc" />
    <file baseinstalldir="/" md5sum="56df2c7ea28790fe74abf4b489b84b1c" name="examples/example-03.php" role="doc" />
-   <file baseinstalldir="/" md5sum="a2b117a9c024c67f9ed3c96b4c5f4fc9" name="Services/ReCaptcha.php" role="php" />
+   <file baseinstalldir="/" md5sum="71827b4a6174f527f78cadfd21c47a67" name="Services/ReCaptcha.php" role="php" />
    <file baseinstalldir="/" md5sum="ef390bd3471a0894742bec4f66065151" name="Services/ReCaptcha/Base.php" role="php" />
    <file baseinstalldir="/" md5sum="4687c632a30e1661023959ca8d43883b" name="Services/ReCaptcha/Exception.php" role="php" />
    <file baseinstalldir="/" md5sum="0eba318dbf25524ffc9a51a26d1c7144" name="Services/ReCaptcha/MailHide.php" role="php" />
@@ -178,6 +177,21 @@ Initial release.
 Automatically built QA release
 Bug #17383 Services_ReCaptcha::validate should not send request if empty
 chall/resp - izi
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>1.0.3</release>
+    <api>1.0.0</api>
+   </version>
+   <stability>
+    <release>stable</release>
+    <api>stable</api>
+   </stability>
+   <date>2011-04-28</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+QA Release: Bug #18487 	Recapture has changed ssl certificates
    </notes>
   </release>
  </changelog>
