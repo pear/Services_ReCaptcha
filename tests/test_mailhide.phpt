@@ -1,5 +1,11 @@
 --TEST--
 Test for Services_ReCaptcha_MailHide class.
+--SKIPIF--
+<?php
+if (!extension_loaded('mcrypt')) {
+    die("skip mcrypt is not installed");
+}
+?>
 --FILE--
 <?php
 
