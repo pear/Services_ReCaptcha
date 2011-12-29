@@ -50,7 +50,7 @@ try {
 
 ?>
 --EXPECT--
-Absolute URL required
+HTTP_Request2 needs an absolute HTTP(S) request URL, 'Some invalid url...' given
 Not Found
 HTTP_Request2_Response
 incorrect-captcha-sol
