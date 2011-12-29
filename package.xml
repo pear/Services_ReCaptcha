@@ -48,7 +48,6 @@ Bug #18487: Recapture has changed ssl certificates
    <file baseinstalldir="/" md5sum="ef390bd3471a0894742bec4f66065151" name="Services/ReCaptcha/Base.php" role="php" />
    <file baseinstalldir="/" md5sum="4687c632a30e1661023959ca8d43883b" name="Services/ReCaptcha/Exception.php" role="php" />
    <file baseinstalldir="/" md5sum="0eba318dbf25524ffc9a51a26d1c7144" name="Services/ReCaptcha/MailHide.php" role="php" />
-   <file baseinstalldir="/" md5sum="7eae2afd7402148c1d6af5c3e187795f" name="tests/AllTests.php" role="test" />
    <file baseinstalldir="/" md5sum="d1e13a5305e5ef06f095404b7255d53e" name="tests/test_errors.phpt" role="test" />
    <file baseinstalldir="/" md5sum="864b13f502382546f9cbbb0692a04b2d" name="tests/test_gethtml.phpt" role="test" />
    <file baseinstalldir="/" md5sum="11a03ad86667da151a192f15efc49d3c" name="tests/test_mailhide.phpt" role="test" />
