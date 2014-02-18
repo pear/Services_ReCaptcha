@@ -8,7 +8,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Services_ReCaptcha": "./"
+            "Services": "./"
         }
     },
     "description": "More info available on: http://pear.php.net/package/Services_ReCaptcha",
@@ -26,7 +26,8 @@
         "ext-mcrypt": "May require the mcrypt PHP extension"
     },
     "require": {
-        "pear/pear_exception": "*"
+        "pear/pear_exception": "*",
+        "pear/http_request2": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
